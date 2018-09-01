@@ -1,0 +1,15 @@
+server:
+  ssl:
+    key-store: classpath:saml/samlKeystore.jks
+    key-store-password: samlsso
+    key-alias: saml-sso
+
+spring:
+  liquibase:
+    change-log: classpath:db-migrations/changelog.xml
+  profiles:
+    active: @spring.profiles.active@
+
+allowed-origins:
+  domains:
+  - http://localhost:3000

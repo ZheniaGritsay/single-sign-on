@@ -1,0 +1,21 @@
+server:
+  port: 8443
+  ssl:
+    key-alias: sample-keystore
+    key-store: classpath:server.jks
+    key-store-password: sample
+    key-store-type: PKCS12
+
+github:
+  client:
+    clientId: da2f49efd51cd12d59b0
+    clientSecret: b027efc1feda679903db757fc6848e0299ea774d
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+
+logging:
+  level:
+    org.springframework.security: DEBUG
